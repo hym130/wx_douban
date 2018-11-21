@@ -1,0 +1,20 @@
+<view class="section tc">
+<view>{{list.title}}</view>
+ <view>
+    <block wx:for="{{subjects}}" wx:key='{{key}}'>
+        <view bindtap='onBtnClick' class='movieDel'>
+          <view class='movieimg'><image src='{{item.images.small}}'></image></view>
+          <view class='moviename'>
+            <view>{{item.title}}</view>
+            <view>{{item.genres}}</view>
+            <view>主演：
+                <text wx:for="{{item.casts}}" wx:key='{{key}}'>{{item.name}}</text>
+            </view>
+            <view>评分：{{item.rating.average}}</view>
+            <view>年代：{{item.year}}</view>
+          </view>
+          
+        </view>
+    </block>      
+</view>
+</view>

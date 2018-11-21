@@ -1,0 +1,25 @@
+<!--pages/details/index.wxml-->
+<view class='details'>
+        <view class='movieDel'>
+          <view class='movieimg'><image src='{{detList.images.small}}'></image></view>
+          <view class='moviename'>
+            <view>{{detList.title}}</view>
+            <view>{{detList.genres}}</view>
+            <view wx:for="{{detList.casts}}" wx:key='{{key}}'>主演：
+                <text>{{item.name}}</text>
+                <image src='{{item.avatars.small}}'></image>
+                <text>{{item.name_en}}</text>
+            </view>
+            <view>评分：{{detList.rating.average}}</view>
+            <view>年代：{{detList.year}}</view>
+            <view>电影时长：{{detList.durations}}</view>
+            <view>电影类型：{{detList.genres}}</view>
+             <view wx:for="{{detList.directors}}" wx:key='{{key}}'>导演：
+                <text>{{item.name}}</text>
+                <image src='{{item.avatars.small}}'></image>
+            </view>
+            
+          </view>
+          
+        </view>    
+</view>

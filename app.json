@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/mine/index",
+    "pages/details/index"
+  ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/like1.png",
+        "selectedIconPath": "/images/like2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "iconPath": "images/paihang1.png",
+        "selectedIconPath": "/images/paihang2.png",
+        "text": "影片排行榜"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "images/chaxun1.png",
+        "selectedIconPath": "/images/chaxun2.png",
+        "text": "查询"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle":"black"
+  }
+}

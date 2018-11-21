@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+  <block wx:for="{{imgUrls}}" wx:key='{{key}}'>  
+  <swiper-item class="banner">  
+    <image src="{{item}}" class="slide-image" width="355px" height="150px"/>  
+  </swiper-item>  
+  </block>  
+</swiper>
+<view>
+    <block wx:for="{{subjects}}" wx:key='{{key}}'>
+        <view bindtap='click' class='movieDel' id='{{item.id}}'>
+          <view class='movieimg'><image src='{{item.images.small}}'></image></view>
+          <view class='moviename'>
+            <view>{{item.title}}</view>
+            <view>{{item.genres}}</view>
+            <view>主演：
+                <text wx:for="{{item.casts}}" wx:key='{{key}}'>{{item.name}}</text>
+            </view>
+            <view>评分：{{item.rating.average}}</view>
+            <view>年代：{{item.year}}</view>
+          </view>
+          
+        </view>
+    </block>      
+</view>
